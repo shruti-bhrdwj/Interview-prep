@@ -11,29 +11,44 @@ public class AnagramProblem {
         String str = sc.next();
         String str1 = sc.next();
 
-        //boolean ans = checkAnagram(str,str1);
+        boolean ans = checkAnagram(str,str1);
         boolean ans2 = checkAnagram2(str,str1);
-        //System.out.println(ans);
+        System.out.println(ans);
         System.out.println(ans2);
     }
 
     private static boolean checkAnagram(String str, String str1) {
-
-        int count = 0;
-        if (str.length() == str1.length()) {
-            Map<Character, Integer> map = new HashMap<>();
-            for (char a : str.toCharArray()) {
-                if (map.containsKey(a)) count++;
-                map.replace(a, count);
-                //if (str1.indexOf(a) <= -1) return false;
-            }
-            for (char a : str1.toCharArray()) {
-                if (!map.containsKey(a)) return false;
-            }
-            return true;
+        // If the lengths are different, return false
+        if (str.length() != str1.length()) {
+            return false;
         }
-        return false;
+
+        // Create a map to count the frequency of characters
+        Map<Character, Integer> map = new HashMap<>();
+
+        // Count frequency of each character in the first string
+        for (char a : str.toCharArray()) {
+            map.put(a, map.getOrDefault(a, 0) + 1);
+        }
+
+        // Decrease the frequency count based on the second string
+        for (char a : str1.toCharArray()) {
+            if (!map.containsKey(a)) {
+                return false; // Character not found in the first string
+            }
+
+            // Decrease the frequency count for each character
+            map.put(a, map.get(a) - 1);
+
+            // If any character frequency becomes negative, it's not an anagram
+            if (map.get(a) < 0) {
+                return false;
+            }
+        }
+
+        return true; // If all frequencies are zero, it's an anagram
     }
+
 
     private static boolean checkAnagram2(String str1, String str2){
         if(str1.length()==str2.length()){

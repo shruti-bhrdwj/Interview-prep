@@ -1,5 +1,7 @@
 package com.shruti.interviewQuestions;
 
+import java.util.StringTokenizer;
+
 public class FindIfSubstring {
     public static void main(String[] args) {
         String s2 = "humans";
@@ -7,6 +9,8 @@ public class FindIfSubstring {
         System.out.println(isSubstring(s1,s2));
         System.out.println(isSubstr(s1,s2));
         System.out.println(isSubstr2(s1,s2));
+        System.out.println(isSubstr3(s2,s1));
+
     }
     //method1
     static int isSubstring(
@@ -59,5 +63,15 @@ public class FindIfSubstring {
         // using indexOf method to check if s1 is
         // a substring of s2
         return s2.indexOf(s1);
+    }
+
+    //method4
+    static boolean isSubstr3(String s1, String s2)
+    {
+        // Loop through s1 and extract substrings of length equal to s2
+        for(int i=0;i<=s1.length()-s2.length();i++){
+            if(s1.substring(i,i+s2.length()).equals(s2)) return true;
+        }
+        return false;
     }
 }

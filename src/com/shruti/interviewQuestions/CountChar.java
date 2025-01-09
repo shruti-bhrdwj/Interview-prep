@@ -18,7 +18,7 @@ public class CountChar {
     public static void main(String args[])
     {
         String str= "geeksforgeeks";
-        char c = 'e';
+        char c = 'o';
         System.out.println(count(str, c));
     }
 }

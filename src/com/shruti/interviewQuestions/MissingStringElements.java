@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 //find missing elements in an array compare to other array
-public class MissingElements {
+public class MissingStringElements {
     public static void main(String[] args) {
         List<String> ans = findMissing(new String[]{"Apple", "banana","orange","mango"},new String[]{"Apple", "banana"});
         System.out.println(ans);
