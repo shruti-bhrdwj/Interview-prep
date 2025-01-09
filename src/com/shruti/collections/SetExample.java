@@ -2,7 +2,7 @@ package com.shruti.collections;
 
 import java.util.*;
 
-public class SetExample {
+public class  SetExample {
     public static void main(String[] args) {
 
         Set<Integer> ll = new TreeSet<>();
@@ -11,12 +11,10 @@ public class SetExample {
         ll.add(25);
         ll.add(30);
         ll.add(45);
-        ll.add(25);
+        ll.add(26);
         ll.add(45);
         ll.add(4);
 
-        strings.add("Shruti");
-        strings.add("Shruti");
         strings.add("Shruti");
         strings.add("Shruti");
 

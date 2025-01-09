@@ -12,9 +12,9 @@ public class ArrayListExample {
         ArrayList<Integer> list = new ArrayList<>(6);
 
         //add elements from input
-        for (int i=0; i<6; i++){
-             list.add(in.nextInt());
-        }
+       for(int i=0;i<6;i++){
+           list.add(in.nextInt());
+       }
 
         //check if list has 57 OR NOT
         boolean b = list.contains(57);
