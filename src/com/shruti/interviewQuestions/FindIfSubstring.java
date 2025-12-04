@@ -26,8 +26,7 @@ public class FindIfSubstring {
             /* For current index i, check for
             pattern match */
             for (j = 0; j < M; j++)
-                if (s2.charAt(i + j)
-                        != s1.charAt(j))
+                if (s2.charAt(i + j) != s1.charAt(j))
                     break;
 
             if (j == M)

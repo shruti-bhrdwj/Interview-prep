@@ -37,13 +37,13 @@ public class AnagramProblem {
                 return false; // Character not found in the first string
             }
 
-            // Decrease the frequency count for each character
-            map.put(a, map.get(a) - 1);
-
-            // If any character frequency becomes negative, it's not an anagram
-            if (map.get(a) < 0) {
-                return false;
-            }
+//            // Decrease the frequency count for each character
+//            map.put(a, map.get(a) - 1);
+//
+//            // If any character frequency becomes negative, it's not an anagram
+//            if (map.get(a) < 0) {
+//                return false;
+//            }
         }
 
         return true; // If all frequencies are zero, it's an anagram

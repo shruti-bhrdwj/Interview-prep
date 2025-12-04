@@ -1,12 +1,7 @@
 package com.shruti.multiThreading;
 
 //Two ways
-//extends thread
-//implement runnable
-
-/*Runnable is the most preferred technique chosen for defining the threads
-because it has the ability to have multiple inheritance. */
-
+// 1. extends thread class
 //public class Main{
 //    public static void main(String[] args)  {
 //        Numberloop loop=new Numberloop();
@@ -23,6 +18,10 @@ because it has the ability to have multiple inheritance. */
 //        }
 //    }
 //}
+
+// 2. implement runnable
+/*Runnable is the most preferred technique chosen for defining the threads
+because it has the ability to have multiple inheritance. */
 
 public class Main{
     public static void main(String[] args)  {

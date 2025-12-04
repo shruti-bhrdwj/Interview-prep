@@ -3,30 +3,22 @@ package com.shruti.interviewQuestions;
 public class LargestDistanceBwChar {
     public static void main(String args[])
     {
-        String str= "geeksforgeeks";
-        char c = 'e';
-        System.out.println(count(str, c));
+        String s1= "geeksforgeeks";
+        char target = 's';
+        System.out.println(count(s1, target));
     }
-    public static int count(String s, char c)
+    public static int count(String s1, char target)
     {
-        int res = 0;
-        int max =0;
-        int firstOccur =0;
-        int lastOccur =0;
 
-        for (int i=0; i<s.length(); i++)
-        {
-            // checking character in string
-            if (s.charAt(i) == c)
-                res++;
-            if(res==1) {
-                firstOccur = s.indexOf( s.charAt(i));
-            }
-            if(res > max) {
-                max = res;
-            }
-            if(res==max){
-                lastOccur = s.indexOf( s.charAt(i));
+        int firstOccur =-1;
+        int lastOccur =-1;
+
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) == target) {
+                if (firstOccur == -1) {
+                    firstOccur = i;
+                }
+                lastOccur = i; // always update last occurrence
             }
         }
         return lastOccur-firstOccur;

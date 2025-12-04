@@ -31,9 +31,7 @@ public class MergeSort {
         for(int i=0;i<n1;i++) leftArr[i] =arr[p+i];
         for(int j=0;j<n2; j++) rightArr[j] = arr[q+1+j];
 
-        int i = 0;
-        int j = 0;
-        int k = p;
+        int i = 0; int j = 0;int k = p;
         while (i<n1 && j<n2) {
             if(leftArr[i]<= rightArr[j]){
                 arr[k]=leftArr[i];

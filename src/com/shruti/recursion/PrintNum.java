@@ -21,7 +21,7 @@ public class PrintNum {
     }
 
     public static int fact(int num){
-        if(num==1){
+        if(num==1 || num==0){
             return 1;
         }
         int ans = num*fact(num-1);

@@ -19,7 +19,7 @@ public class MissingStringElements {
         List<String> missing = new ArrayList();
         for (String s:s1) {
             for(String st: s2)
-            if(s==st) common.add(s);
+            if(s.equals(st)) common.add(s);
         }
 
         for(String s: s1){

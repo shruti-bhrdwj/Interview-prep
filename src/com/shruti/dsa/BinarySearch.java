@@ -2,8 +2,8 @@ package com.shruti.dsa;
 
 public class BinarySearch {
     public static void main(String[] args) {
-       int[] arr = {-10,1,2,3,4,5,6,7,8};
-       int ans = binarySearch(arr,8);
+       int[] arr = {1,2,3,4,5,6,7,8};
+       int ans = binarySearch(arr,5);
         System.out.println(ans);
     }
 
@@ -21,9 +21,7 @@ public class BinarySearch {
             } else{
                 return mid;
             }
-
         }
-
         return -1;
     }
 }

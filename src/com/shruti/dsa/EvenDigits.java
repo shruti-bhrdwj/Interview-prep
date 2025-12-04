@@ -16,7 +16,7 @@ public class EvenDigits {
         }
         return count;
     }
-//
+
 //    static boolean even(int num) {
 //        if(Integer.toString(num).length()%2 == 0){
 //            return true;
@@ -32,10 +32,10 @@ public class EvenDigits {
             return 1;
         }
         int count = 0;
-            while (num>0){
-                count++;
-                num/=10;
-            }
+        while (num>0){
+            count++;
+            num/=10;
+        }
         return count;
     }
 

@@ -8,7 +8,8 @@ public class Patterns {
         System.out.println("-----------------");
         invertedTriangle(5);
         System.out.println("-----------------");
-       // pyramid(5);
+        pyramid(5);
+        System.out.println("-----------------");
         HollowRectangle(4,5);
     }
 
@@ -42,24 +43,21 @@ public class Patterns {
 
     }
 
-    /*static void pyramid(int n) {
-
+    static void pyramid(int n) {
 
         for (int i = 0; i < n; i++) {
-            for (int j = i; j < 0; j--) {
+            // Print spaces
+            for (int j = n; j > i; j--) {
+                System.out.print("  ");
+            }
+            // Print stars
+            for (int k = 1; k <= (2 * i - 1); k++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < i; j++) {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
-
-    }*/
+    }
 
     static void HollowRectangle(int n, int m){
         for (int i = 1; i <=n; i++) {

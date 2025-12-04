@@ -1,5 +1,8 @@
 package com.shruti.sortingAlgos;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class FindDuplicate {
     public static void main(String[] args) {
         int[] nums = {3,1,3,4,2};
@@ -18,6 +21,7 @@ public class FindDuplicate {
                 i++;
             }
         }
+        System.out.println(Arrays.toString(arr));
         for (int index = 0; index < arr.length-1; index++) {
             if(arr[index] != index+1){
                 return arr[index];

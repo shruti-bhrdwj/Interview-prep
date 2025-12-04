@@ -3,8 +3,7 @@ package com.shruti.dsa;
 public class InfiniteArrayBS {
     //As this is infinite array lets assume we don't know the end. so, we can't use arr.length function
     public static void main(String[] args) {
-        int[] arr = {3, 5, 7, 9, 10, 90,
-                100, 130, 140, 160, 170};
+        int[] arr = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
         int target = 10;
         System.out.println(ans(arr, target));
     }

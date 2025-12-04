@@ -8,19 +8,22 @@ public class PermutationCombination {
         System.out.print("Enter n: ");
         int n = sc .nextInt();
         System.out.print("Enter r: ");
+
         int r = sc .nextInt();
+        if (r > n) {
+            System.out.println("Invalid input: r should be less than or equal to n.");
+            return;
+        }
         int perm = permutation(n,r);
         int comb = combination(n,r);
         System.out.println("Permutations: " + perm + " Combinations: " + comb);
     }
 
     private static int fact(int num) {
-        int factorial;
         if(num <=1){
             return 1;
         }
-        factorial = fact(num-1)* num;
-        return factorial;
+        return fact(num-1)* num;
     }
 
     private static int combination(int n, int r) {

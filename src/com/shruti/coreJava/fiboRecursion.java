@@ -3,9 +3,9 @@ package com.shruti.coreJava;
 public class fiboRecursion {
 
     public static void main(String[] args) {
-        int num =10;
+        int num =20;
         for (int i = 0; i < num; i++) {
-            System.out.print(fibonacci(i) + "," );
+            System.out.print(fibonacci(i) + ", " );
         }
     }
 
